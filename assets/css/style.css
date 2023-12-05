@@ -1,0 +1,387 @@
+:root {
+  --bright-turquoise: #2aefcb;
+  --astronaut: #234572;
+  --reef: #CCFFB9;
+  --smoke: whitesmoke;
+  --navy: #13293d;
+  --warm-red: #b8001f;
+  --blue: #0099ff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+    font-family: monospace;
+    font-size: 16px;
+color: var(--smoke);
+    background-image: url("/assets/images/thermalbgrepeat.jpg");
+background-size: cover;
+}
+/*------------------------------------------------------------------*/
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11%;
+    background-color: #13293d;
+    background: linear-gradient(
+      black,
+     black,  
+     black,
+      var(--navy),
+      var(--navy),
+      black,
+      black,
+      black,
+           );
+    color: var(--smoke);
+    font-size: 22px;
+
+    /*==============border around header=============================*/
+
+    border: 2px solid var(--smoke);
+border-style: dashed;
+  }
+
+  h1 {
+    font-size: 200%;
+    font-family: 
+  }
+
+  img {
+border: 2px solid var(--smoke);
+border-style: dashed;
+border-radius: 4px;
+  }
+
+
+  /* Second part of header text 'Professional Profile' */
+  h1::after {
+    font-family: Roboto, Tahoma, sans-serif;
+    content: 'PROFESSIONAL PROFILE';
+    font-size: 50px;
+    color: var(--smoke);
+    margin-left: 5px;
+  }
+  
+  h2 {
+    margin: 2% 0;
+    font-size: 180%;
+  }
+  
+  h3 {
+    margin: 2% 0;
+    font-size: 150%;
+  }
+  
+  /*------------------------------work examples card/box------------------------------------*/
+
+  .card-header {
+
+    margin-top: 0px;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /*shadow and glow on hover*/
+
+  .card-header:hover {
+    box-shadow: inset 0px 0px 25px var(--smoke), 0 0 15px var(--smoke);
+  }
+
+  /*-----------------------------------------------------------------------------*/
+
+  /*Pseudo Elements/Selectors operating within main Selectors--------------------*/
+  
+  /* Added asterisk before every h3 heading */
+  h3::before {
+    font-family: Impact;
+    content: '\273A';
+    color: var(--bright-turquoise);
+    margin-right: 5px;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+  }
+
+  /*Nav bar text items*/
+  nav a {
+    color: var(--smoke);
+    font-weight: bold;
+    text-decoration: none;
+  }
+    /*Nav bar text items change colour when hovered over*/
+  nav a:hover {
+    color: var(--blue);
+  }
+  
+  main {
+    display: flex;
+    flex: 1 1 0;
+    max-width: 1200px;
+    margin: 1%;
+  }
+  
+  section {
+    flex: 1 1 0;
+    padding-right: 0%;
+    padding-left: 3%;
+    padding-top: 3%;
+  }
+
+  /*---------these are the locations header and side bar links go to---------------------*/ 
+  
+  #profile-photo {
+  }
+  /*
+destination image for work links
+*/
+  #work-link {
+  }
+  /*
+destination image for contact links
+*/
+#contact-list {
+  width: 100px;
+  height: auto;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+  
+/*the article border creates the horizontal line between sections*/
+
+  article {
+    border-bottom: 1px solid black;
+  }
+  
+  article p {
+    margin: 2% 0;
+    font-size: 110%;
+  }
+  
+  article ul {
+    margin-left: 5%;
+    margin-bottom: 2%;
+    font-size: 110%;
+    list-style: circle;
+  }
+  
+  aside {
+    width: 90%;
+    margin: 20px;
+    padding: 2%;
+    background-color: var(--navy);
+}
+  
+/*welcome sidebar*/
+.table1 {
+border-right: 0px solid;
+border-spacing: 136px .5rem;
+font-size: 20px;
+padding-left: 1px;
+text-align: right;
+}
+
+/*about me sidebar*/
+.table2 {
+  border-right: 0px solid;
+  border-spacing: 136px .5rem;
+  font-size: 20px;
+  padding-left: 1px;
+  text-align: right;
+  }
+
+/*work sidebar*/
+  .table3 {
+    border-right: 0px solid;
+    border-spacing: 136px 41rem;
+    font-size: 20px;
+    padding-left: 1px;
+    text-align: right;
+
+    }
+/*contact me sidebar*/
+    .table4 {
+      border-right: 0px solid;
+      border-spacing: 136px 0rem;
+      font-size: 20px;
+      padding-left: 1px;
+      text-align: right;
+      }
+
+      /*work images table*/
+      .table5 {
+      }
+
+  input,
+  button {
+    width: 100%;
+    margin: 2% 0;
+    padding: 1%;
+  }
+
+  /*text for work flexboxes*/
+  .work-box-text {
+
+    font-family: Monospace, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-left: 2px;
+    margin-bottom: 1px;
+    background-color: var(--smoke); opacity: 80%;
+    border-radius: 6%;
+    text-align: center;
+  }
+
+  /*new flex box images under work section---------------------------------------------*/
+
+.products {
+  flex: 4;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 0 0 30%;
+  position: relative;
+}
+
+/* 
+Flex basis is different for the bigger image, and flex shrink and grow properties set to 0 so that the images don't minimize
+*/
+
+/*these are the smaller images*/
+.card {
+  border-style: dashed;
+  border-width: 2px;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 0 0 30%;
+}
+/*this is the bigger image*/
+.card2 {
+  border-style: dashed;
+  border-width: 2px;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 0 0 50%;
+  display: block;
+}
+
+.card img {
+  width: 100%;
+}
+  
+/*footer------------------------------------------------------*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  background-color: var(--navy);
+border: var(--smoke);
+border-style: dashed;
+  background: linear-gradient(
+   black, 
+   black,  
+   var(--navy),
+   var(--navy),
+   var(--navy),
+   var(--navy),
+   black, 
+   black
+         );
+         
+/*footer text colour*/
+  color: var(--smoke);
+}
+
+    /*Media enquiries-------------------------------------------------------------------*/ 
+
+      /* Tablets - header changes color */
+      @media screen and (max-width: 992px) {
+        header {
+            background: linear-gradient(
+            var(--warm-red),
+             black,
+           black,  
+            var(--navy),
+            var(--navy),
+            var(--navy),
+                black,
+                 black,
+                  var(--warm-red)
+                  );
+          }
+                /* Tablets - footer changes color */
+          footer {
+            background: linear-gradient(
+              var(--warm-red),
+              black,
+              black,
+              var(--navy),
+              var(--navy),
+              var(--navy),
+              black,
+              black,
+                 var(--warm-red)
+                  );
+          }
+        }
+      /* Large smartphones - navbar changes color */
+      @media screen and (max-width: 768px) {
+        header {
+          background: linear-gradient(
+    
+          rgb(11, 91, 165),
+          black,
+          black,
+          black,
+          black,
+          var(--navy),
+          var(--navy),
+          var(--navy),
+          black,
+          black,
+          black,
+          black,
+             var(--blue)
+              );
+      }
+                   /* Large smartphones - footer changes color */
+                   footer {
+                    background: linear-gradient(
+                      var(--blue),
+                      black,
+                      black,
+                      var(--navy),
+                      var(--navy),
+                      var(--navy),
+                      black,
+                      black,
+                      var(--blue)
+                          );
+                  }
+     }
+    
+      @media screen and (max-width: 768px) {
+        header, main {
+          flex-direction: column;
+        }
+      
+        section {
+          padding-right: 0;
+        }
+      
+        aside {
+          width: 100%;
+          text-align: center;
+        }
+      }
